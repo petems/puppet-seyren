@@ -27,7 +27,7 @@ class seyren {
   	path => '/usr/bin:/bin',
   }
 
-  include seyren::package, seyren::config, seyren::service
+  include seyren::params, seyren::package, seyren::config, seyren::service
 
   Class['seyren::package'] -> Class['seyren::config'] ~> Class['seyren::service']
 

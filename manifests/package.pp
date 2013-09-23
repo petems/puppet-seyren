@@ -40,7 +40,7 @@ class seyren::package {
 
   exec { "build-seyren-with-maven" :
     command   => 'mvn clean package',
-    creates   => 'seyren-web/',
+    creates   => '/opt/seyren/seyren-web/',
   }
 
 }

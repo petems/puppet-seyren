@@ -41,6 +41,7 @@ class seyren::package {
   exec { "build-seyren-with-maven" :
     command   => 'mvn clean package',
     creates   => '/opt/seyren/seyren-web/',
+    require   => Exec['download-seyren-from-git']
   }
 
 }

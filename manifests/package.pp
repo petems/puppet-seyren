@@ -35,12 +35,12 @@ class seyren::package {
 
   exec { "download-seyren-from-git" :
     command   => 'git clone https://github.com/scobal/seyren /opt/seyren',
-    creates   => '/opt/seyren'
+    creates   => '/opt/seyren',
   }
 
   exec { "build-seyren-with-maven" :
-    command   => 'mvn clean package'
-    creates   => 'seyren-web/'
+    command   => 'mvn clean package',
+    creates   => 'seyren-web/',
   }
 
 }

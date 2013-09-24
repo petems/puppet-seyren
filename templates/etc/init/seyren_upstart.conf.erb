@@ -3,8 +3,9 @@ appuser    = 'root'
 appgroup   = 'root'
 apphome    = '/opt/seyren/'
 jarname    = 'seyren-web/target/dependency/jetty-runner.jar'
-args       = "--path /seyren seyren-web/target/*.war"
+args       = "seyren-web/target/*.war"
 java_bin   = "/usr/lib/jvm/java-7-openjdk-amd64/bin/java"
+config 	   = "/opt/seyren/seyren_config.sh"
 -%>
 # upstart script for the  seyren application
 
@@ -29,6 +30,6 @@ script
                         --chuid $USER:$GROUP \
                         --pidfile $HOME/seyren.pid -m \
                         --chdir $HOME \
-                        --exec <%= java_bin %> -- -jar <%= jarname %> \
+                        --exec source <%=config %>; <%= java_bin %> -- -jar <%= jarname %> \
                         <%= args %>
 end script

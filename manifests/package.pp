@@ -40,10 +40,8 @@ class seyren::package {
     revision => 'c29cb041197e1441f2ed192b677d5442d97d8195'
   }
 
-
   exec { "build-seyren-with-maven" :
     command   => 'mvn clean package',
-    creates   => '/opt/seyren/seyren-web/',
     require   => Vcsrepo['/opt/seyren']
   }
 

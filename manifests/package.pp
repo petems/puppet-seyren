@@ -33,10 +33,13 @@ class seyren::package {
     ensure  => latest,
   }
 
-  exec { "download-seyren-from-git" :
-    command   => 'git clone https://github.com/scobal/seyren /opt/seyren',
-    creates   => '/opt/seyren',
+  vcsrepo { "/opt/seyren":
+    ensure => present,
+    provider => git,
+    source => 'https://github.com/scobal/seyren',
+    revision => 'c29cb041197e1441f2ed192b677d5442d97d8195'
   }
+
 
   exec { "build-seyren-with-maven" :
     command   => 'mvn clean package',

@@ -5,4 +5,4 @@ license 'MIT'
 summary 'Seyren is an alerting dashboard for Graphite.'
 description 'Seyren is an alerting dashboard for Graphite.'
 project_page 'https://github.com/petems/puppet-rbenv'
-
+dependency 'puppetlabs/vcsrepo', '>= 0.1.2'

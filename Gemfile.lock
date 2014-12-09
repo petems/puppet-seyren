@@ -168,6 +168,7 @@ GEM
       unf_ext
     unf_ext (0.0.6)
     uuidtools (2.1.5)
+    vagrant-wrapper (1.2.1.1)
 
 PLATFORMS
   ruby
@@ -184,3 +185,4 @@ DEPENDENCIES
   rspec-puppet
   serverspec
   simplecov
+  vagrant-wrapper

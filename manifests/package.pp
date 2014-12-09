@@ -42,7 +42,11 @@ class seyren::package {
 
   exec { 'build-seyren-with-maven' :
     command   => 'mvn clean package',
-    require   => Vcsrepo['/opt/seyren']
+    cwd       => '/opt/seyren',
+    require   =>  [
+                    Vcsrepo['/opt/seyren'],
+                    Package['maven']
+                   ],
   }
 
 }

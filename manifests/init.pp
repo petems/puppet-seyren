@@ -15,16 +15,16 @@
 #
 # === Authors
 #
-# Peter Souter 
+# Peter Souter
 #
 # === Copyright
 #
-# 
+#
 #
 class seyren {
 
   Exec {
-  	path => '/usr/bin:/bin',
+    path => '/usr/bin:/bin',
   }
 
   include seyren::params, seyren::package, seyren::config, seyren::service

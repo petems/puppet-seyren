@@ -15,11 +15,11 @@
 #
 # === Authors
 #
-# Peter Souter 
+# Peter Souter
 #
 # === Copyright
 #
-# 
+#
 #
 class seyren::params {
   case $::osfamily {
